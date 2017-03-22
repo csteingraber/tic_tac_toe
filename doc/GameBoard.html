@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class GameBoard - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-available_spaces">#available_spaces</a>
+    
+    <li ><a href="#method-i-clear_board">#clear_board</a>
+    
+    <li ><a href="#method-i-draw">#draw</a>
+    
+    <li ><a href="#method-i-print_board">#print_board</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-GameBoard">
+  <h1 id="class-GameBoard" class="class">
+    class GameBoard
+  </h1>
+
+  <section class="description">
+    
+<h1 id="class-GameBoard-label-The+Board">The Board<span><a href="#class-GameBoard-label-The+Board">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<pre>This class is reponsible for maintaining
+the state of the X&#39;s and O&#39;s at any given
+time during the game and provides the functionality
+for drawing on it, seeing it, clearing it, and
+calculating the spaces available to draw on.</pre>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-board" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">board</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates the empty 3X3 board.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File game_board.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+        <span class="ruby-ivar">@board</span> = [[<span class="ruby-string">&quot;_&quot;</span>, <span class="ruby-string">&quot;_&quot;</span>, <span class="ruby-string">&quot;_&quot;</span>], [<span class="ruby-string">&quot;_&quot;</span>, <span class="ruby-string">&quot;_&quot;</span>, <span class="ruby-string">&quot;_&quot;</span>], [<span class="ruby-string">&quot;_&quot;</span>, <span class="ruby-string">&quot;_&quot;</span>, <span class="ruby-string">&quot;_&quot;</span>]]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-available_spaces" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">available_spaces</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns an array of arrays. Each child array has two elements, the
+x-coordinate and the y-coordinate of the available space.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="available_spaces-source">
+            <pre><span class="ruby-comment"># File game_board.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">available_spaces</span>
+        <span class="ruby-identifier">spaces</span> = []
+
+        <span class="ruby-ivar">@board</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">row</span>.<span class="ruby-identifier">each_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">column</span><span class="ruby-operator">|</span> <span class="ruby-identifier">spaces</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">column</span>, <span class="ruby-identifier">index</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">index</span>][<span class="ruby-identifier">column</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;_&quot;</span> }
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">spaces</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-clear_board" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clear_board</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Fills in every spot with the empty character “_”.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="clear_board-source">
+            <pre><span class="ruby-comment"># File game_board.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clear_board</span>
+        <span class="ruby-ivar">@board</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">map</span> { <span class="ruby-string">&quot;_&quot;</span> } }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-draw" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">draw</span><span
+            class="method-args">(letter, x_coordinate, y_coordinate)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Given the current player&#39;s letter and desired coordinates, draw their
+letter on the board.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="draw-source">
+            <pre><span class="ruby-comment"># File game_board.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw</span>(<span class="ruby-identifier">letter</span>, <span class="ruby-identifier">x_coordinate</span>, <span class="ruby-identifier">y_coordinate</span>)
+        <span class="ruby-comment"># Are the user&#39;s coordinates on the board and free to occupy?</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">x_coordinate</span>.<span class="ruby-identifier">between?</span>(<span class="ruby-value">0</span>, <span class="ruby-value">2</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y_coordinate</span>.<span class="ruby-identifier">between?</span>(<span class="ruby-value">0</span>, <span class="ruby-value">2</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">y_coordinate</span>][<span class="ruby-identifier">x_coordinate</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;_&quot;</span>
+                        <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">y_coordinate</span>][<span class="ruby-identifier">x_coordinate</span>] = <span class="ruby-identifier">letter</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;You can&#39;t draw on a tile that&#39;s already been used!&quot;</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;That is not on the board!&quot;</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-print_board" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">print_board</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Formats and prints the board the the screen with “_” representing an empty
+spot.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="print_board-source">
+            <pre><span class="ruby-comment"># File game_board.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_board</span>
+        <span class="ruby-ivar">@board</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">row</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">column</span><span class="ruby-operator">|</span> <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{column}  &quot;</span> }
+                <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;\n&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">puts</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;-------&quot;</span> <span class="ruby-comment"># Create a visual separation between turns.</span>
+        <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
