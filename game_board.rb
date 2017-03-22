@@ -1,4 +1,6 @@
 class GameBoard
+	attr_reader :board
+
 	def initialize
 		@board = [["_", "_", "_"], ["_", "_", "_"], ["_", "_", "_"]]
 	end
