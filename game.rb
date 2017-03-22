@@ -3,12 +3,12 @@ require "./player"
 require "./computer"
 
 #= Referee
-# This class acts as the container for
-# all of the other defined classes and executes
-# all interactions between them. Upon instantiation,
-# the first round of the game commences until someone
-# wins or there is a tie. You are then given the option 
-# to play another round or terminate the game.
+#This class acts as the container for
+#all of the other defined classes and executes
+#all interactions between them. Upon instantiation,
+#the first round of the game commences until someone
+#wins or there is a tie. You are then given the option 
+#to play another round or terminate the game.
 class Game
 	# Create GameBoard, Player, and Computer objects and start the game.
 	def initialize

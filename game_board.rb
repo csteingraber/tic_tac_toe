@@ -1,9 +1,9 @@
 #= The Board
-# This class is reponsible for maintaining
-# the state of the X's and O's at any given
-# time during the game and provides the functionality
-# for drawing on it, seeing it, clearing it, and
-# calculating the spaces available to draw on.
+#This class is reponsible for maintaining
+#the state of the X's and O's at any given
+#time during the game and provides the functionality
+#for drawing on it, seeing it, clearing it, and
+#calculating the spaces available to draw on.
 class GameBoard
 	attr_reader :board
 

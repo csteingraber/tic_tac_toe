@@ -1,9 +1,9 @@
 #= You
-# This class represents the user of this game and
-# provides access to whether or not you are "X's"
-# or "O's". This class also supplies the functionality
-# to make decisions on where to place your letter on 
-# board.
+#This class represents the user of this game and
+#provides access to whether or not you are "X's"
+#or "O's". This class also supplies the functionality
+#to make decisions on where to place your letter on 
+#board.
 class Player
 	attr_reader :letter
 
