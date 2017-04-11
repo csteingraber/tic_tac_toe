@@ -1,4 +1,4 @@
-require "./player"
+require "player"
 
 #= Opponent
 #This class acts as your adversary and inherits

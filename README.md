@@ -1,2 +1,2 @@
 # Tic Tac Toe
-This project is to demonstrate understanding of Object Oriented Programming principles with Ruby. This project is part of [The Odin Project's Cirriculum](http://www.theodinproject.com/courses/ruby-programming/lessons/oop?ref=lnav).
+This project is to demonstrate understanding of Object Oriented Programming principles with Ruby. This project is part of [The Odin Project's Cirriculum](http://www.theodinproject.com/courses/ruby-programming/lessons/oop?ref=lnav). This project is also demonstrating experiecne with RSpec and TDD/BDD.

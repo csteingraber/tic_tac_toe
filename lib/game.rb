@@ -1,6 +1,7 @@
-require "./game_board"
-require "./player"
-require "./computer"
+$LOAD_PATH.unshift File.expand_path("../", __FILE__)
+require "game_board"
+require "player"
+require "computer"
 
 #= Referee
 #This class acts as the container for
